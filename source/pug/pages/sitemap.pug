@@ -14,7 +14,7 @@ block main
         src: "ui-kit.html"
       },
       {
-        name: "Главная — index.html",
+        name: "Анимации — index.html",
         src: "index.html"
       },
     ]
@@ -22,7 +22,8 @@ block main
   main
     .sitemap
       .container
-        img(src="https://via.placeholder.com/300x150", width="300", alt="Логотип проекта")
+        a.sitemap__logo(href="index.html", aria-label="Переход на главную")
+          +icon("logo", 300, 150)(alt="Логотип проекта")
         h1 Список страниц
         ol
           each page in pages

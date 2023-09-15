@@ -3,15 +3,23 @@ mixin header(headerMods, currentUrl)
     const headerLinks = [
       {
         href: "index.html",
-        text: "Главная"
+        text: "Анимации"
       },
       {
         href: "#",
-        text: "Страница 2"
+        text: "Карта 1"
       },
       {
         href: "#",
-        text: "Страница 3"
+        text: "Карта 2"
+      },
+      {
+        href: "#",
+        text: "Карта 3"
+      },
+      {
+        href: "#",
+        text: "Карта 4"
       },
     ]
 
@@ -19,7 +27,8 @@ mixin header(headerMods, currentUrl)
     .container
       if(currentUrl === "index.html")
         //- lighthouse снимает 10 баллов SEO за <a> без href
-        span.header__logo Логотип
+        span.header__logo
+          +icon("logo", 181, 33)(alt="Логотип проекта")
       else
         a.header__logo(href="index.html", aria-label="Переход на главную") Логотип
       nav.main-nav
