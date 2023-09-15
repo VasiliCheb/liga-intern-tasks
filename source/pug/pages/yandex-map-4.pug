@@ -1,0 +1,16 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Карта - 4. Проверка знаний интернов." //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "yandex-map-4.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+block main
+  main
+    //- на странице запрещен "голый" код
+    //- все блоки вставляются из папки pug/components/blocks
+    +intro()

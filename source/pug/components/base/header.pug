@@ -6,19 +6,19 @@ mixin header(headerMods, currentUrl)
         text: "Анимации"
       },
       {
-        href: "#",
+        href: "yandex-map-1.html",
         text: "Карта 1"
       },
       {
-        href: "#",
+        href: "yandex-map-2.html",
         text: "Карта 2"
       },
       {
-        href: "#",
+        href: "yandex-map-3.html",
         text: "Карта 3"
       },
       {
-        href: "#",
+        href: "yandex-map-4.html",
         text: "Карта 4"
       },
     ]
@@ -30,7 +30,8 @@ mixin header(headerMods, currentUrl)
         span.header__logo
           +icon("logo", 181, 33)(alt="Логотип проекта")
       else
-        a.header__logo(href="index.html", aria-label="Переход на главную") Логотип
+        a.header__logo(href="index.html", aria-label="Переход на главную")
+          +icon("logo", 181, 33)(alt="Логотип проекта")
       nav.main-nav
         button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
           +icon("icon-burger", 20, 20)
