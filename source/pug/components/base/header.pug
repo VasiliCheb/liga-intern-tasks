@@ -23,18 +23,20 @@ mixin header(headerMods, currentUrl)
       },
     ]
 
-  header.header(class=headerMods)
+  header.header(class=headerMods, data-fix-block)
     .container
       if(currentUrl === "index.html")
         //- lighthouse снимает 10 баллов SEO за <a> без href
-        span.header__logo
+        .span.header__logo
           +icon("logo", 181, 33)(alt="Логотип проекта")
       else
         a.header__logo(href="index.html", aria-label="Переход на главную")
           +icon("logo", 181, 33)(alt="Логотип проекта")
-      nav.main-nav
-        button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
+      button.header__toggle(type="button", data-menu="toggle", aria-label="Переключатель отображения меню")
           +icon("icon-burger", 20, 20)
+
+    nav.main-nav(data-menu="nav", data-fix-block)
+      .container
         .main-nav__wrapper
           ul.main-nav__list
             each link in headerLinks
@@ -43,4 +45,5 @@ mixin header(headerMods, currentUrl)
                 if(activeState)
                   span.main-nav__link.is-active= link.text
                 else
-                  a.main-nav__link(href=link.href)= link.text
+                  a.main-nav__link(href=link.href)
+                    span=link.text

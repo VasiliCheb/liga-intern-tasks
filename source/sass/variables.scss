@@ -17,6 +17,7 @@ $color-white-smoke:                 #f6f6f6;
 $color-clear-day:                   #e1eae7;
 $color-night-rider:                 #303030;
 $color-maya-blue:                   #6bcaff;
+$color-zambezi:                     #5a5a5a;
 
 // Gradient
 
@@ -67,3 +68,11 @@ $pd-sm: 18px;
 $pd-md: 36px;
 $pd-lg: 48px;
 $pd-xlg: 60px;
+
+// CSS Variables
+//----------------------------------
+
+html {
+  // изначально в цсс, чтобы не прыгало при загрузке
+  --header-height: 70px;
+}
