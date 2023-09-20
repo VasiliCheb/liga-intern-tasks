@@ -44,11 +44,13 @@ mixin intro()
         .intro__cards
           each card in cards
             if card.offset
-              a.card-simple(href= card.href)
-                h2.card-simle__title.title.title--h2!= card.title
+              //- a.card-simple(href= card.href)
+              +btn({href: card.href}).card-simple(aria-label="Кнопка перехода по странице", data-offset=card.offset)
+                h2.card-simle__title.title.title--h2!=card.title
             else
-              a.card-simple(href= card.href)
-                h2.card-simle__title.title.title--h2!= card.title
+              //- a.card-simple(href= card.href)
+              +btn({href: card.href}).card-simple(aria-label="Кнопка перехода по странице")
+                h2.card-simle__title.title.title--h2!=card.title
 
       .intro__bg
         video(src="video/background-wave.mp4", alt="waves", autoplay="true", muted="true", loop, playsinline)
