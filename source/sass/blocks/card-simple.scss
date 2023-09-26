@@ -19,4 +19,13 @@
   @include vp-767 {
     min-height: unset;
   }
+
+  &--dark {
+    background-color: $color-gainsboro;
+  }
+
+  &--centered {
+    justify-content: center;
+    align-items: center;
+  }
 }
