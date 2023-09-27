@@ -13,7 +13,10 @@ block main
     //- на странице запрещен "голый" код
     //- все блоки вставляются из папки pug/components/blocks
     +intro()
+
     each sectionContent in sectionsData
       +section(sectionContent)&attributes(sectionContent.attr)
+
+    +scroll-slider()
 
 block modals
