@@ -25,7 +25,7 @@ mixin scroll-slider()
   .scroll-slider(data-scroll-slider="parent")
     section.scroll-slider__sticky#scroll-slider(data-scroll-slider="sticky")
       each slide, i in slides
-        .scroll-slider__slide(data-scroll-slider="slide")
+        .scroll-slider__slide(data-scroll-slider="slide", class= i === 0 ? 'is-active' : '')
           .container
             .content-block.content-block--centered
               h2= slide.title
